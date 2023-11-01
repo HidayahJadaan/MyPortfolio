@@ -90,7 +90,7 @@ section {
   position: relative;
 
   display: flex;
-  gap: 90px;
+  gap: 2px;
   align-items: center;
   justify-content: flex-start;
 }
@@ -105,7 +105,7 @@ section {
 .my-img-container {
   border-left: 5px solid var(--second-main-color);
   border-top: 5px solid var(--second-main-color);
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   box-shadow: var(--third-main-color) 0px 1px 20px;
   transition: box-shadow 0.4s ease; /* Add a transition for smooth hover effect */
