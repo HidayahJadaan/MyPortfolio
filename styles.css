@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+:root {
+  --bg-color: #020312;
+  --text-color: #fff;
+  --main-color: #eb4a4a;
+  --second-main-color: #8d0ee9;
+  --third-main-color: #f137a2;
+  /* --forth-main-color:; */
+  --second-color: gray;
+  --other-color: #12141c;
+  --h1-font: 2.2rem;
+  --h2-font: 1.2rem;
+  --p-font: 1.1rem;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 22px 16%;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.logo {
+  width: 135px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--second-color);
+  font-size: var(--p-font);
+  padding: 10px 25px;
+  margin: 0 2px;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  background: linear-gradient(
+    to right,
+    var(--second-main-color),
+    var(--third-main-color)
+  );
+  color: var(--text-color);
+}
+
+#menu-icon {
+  font-size: 36px;
+  color: var(--text-color);
+  z-index: 1001;
+  cursor: pointer;
+  display: none;
+}
+
+section {
+  padding: 160px 16% 90px;
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  gap: 90px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.home-text h1 {
+  margin: 20px 0;
+  font-size: var(--h1-font);
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+.my-img-container {
+  border-left: 5px solid var(--second-main-color);
+  border-top: 5px solid var(--second-main-color);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--third-main-color) 0px 1px 20px;
+  transition: box-shadow 0.4s ease; /* Add a transition for smooth hover effect */
+  animation: shadowAnimation 1.5s infinite alternate; /* Create an animation */
+}
+
+.my-img-container:hover {
+  box-shadow: var(--third-main-color) 0px 1px 50px; /* Change the box-shadow on hover */
+}
+#my-img {
+  border-radius: 24px;
+}
+
+@keyframes shadowAnimation {
+  0% {
+    box-shadow: var(--third-main-color) 0px 1px 25px;
+  }
+  100% {
+    box-shadow: var(--third-main-color) 0px 1px 50px;
+  }
+}
+
+.first {
+  color: var(--second-main-color);
+}
+
+.second {
+  color: var(--third-main-color);
+}
+
+.home-text h4 {
+  color: var(--second-main-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.home-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: var(--second-color);
+}
+.btn {
+  background: linear-gradient(
+    to right,
+    var(--second-main-color),
+    var(--third-main-color)
+  );
+  border-radius: 0.5rem;
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-color);
+  border: 1px solid var(--second-main-color);
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  box-shadow: var(--third-main-color) 0px 1px 25px;
+  transform: scale(1.01) translateY(-5px);
+}
+
+header.sticky{
+    padding: 10px 16%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #0e1630;
+    backdrop-filter: blur(15px);
+    /* box-shadow: #ff9f0d 0px 1px 25px; */
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--third-main-color);
+}
+
+
+
+.about-img img {
+    width: 90%;
+    height: 80%;
+}
+
+
+
+.about-text{
+    text-align: center;
+    margin: 20px;
+}
+.about-text h4{
+    margin: 10px 0;
+    color: var(--third-main-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.about-text h2{
+  
+    font-size: var(--h2-font);
+  
+}
+
+.about-text p{
+    color: var(--second-color);
+    font-size: var(--h2-font);
+  line-height: 30px;
+  margin-bottom: 2rem;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+gap: 1rem;
+margin-bottom: 3rem;
+align-items: center;
+}
+
+.main-text{
+    text-align: center;
+}
+
+.main-text h2{
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+}
+
+.main-text h4{
+    color: var(--third-main-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.portfolio-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.row{
+    width: 70%;
+}
+
+.row img{
+    height: 100%;
+    width: 100%;
+border-radius: 0.5rem;
+margin-bottom: 1.5rem;
+}
